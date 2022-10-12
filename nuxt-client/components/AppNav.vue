@@ -15,7 +15,7 @@
       <template v-if="!$auth.loggedIn">
 
         <li><nuxt-link :to="{ name: 'login' }" class="px-2">Login</nuxt-link></li>
-        <li><a href="" class="px-2">Register</a></li>
+        <li><nuxt-link :to="{ name: 'register' }" class="px-2">Register</nuxt-link></li>
       </template>
 
     </ul>
