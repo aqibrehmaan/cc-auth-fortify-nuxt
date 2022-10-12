@@ -1,0 +1,23 @@
+<template>
+  <div>
+    <ul class="flex items-center mb-6 -mx-2">
+      <li>
+        <nuxt-link :to="{ name: 'index'}" class="px-2">Home</nuxt-link>
+      </li>
+
+      <template v-if="$auth.loggedIn">
+         <li><a href="" class="px-2">{{ $auth.user.name }}</a></li>
+          <li><a href="" class="px-2">Dashboard</a></li>
+          <li><a href="" class="px-2">Log out</a></li>
+      </template>
+
+
+      <template v-if="!$auth.loggedIn">
+
+        <li><nuxt-link :to="{ name: 'login' }" class="px-2">Login</nuxt-link></li>
+        <li><a href="" class="px-2">Register</a></li>
+      </template>
+
+    </ul>
+  </div>
+</template>
