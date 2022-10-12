@@ -19,6 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashbaord', function (Request $request) {
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function (Request $request) {
     return $request->json([]);
 });
