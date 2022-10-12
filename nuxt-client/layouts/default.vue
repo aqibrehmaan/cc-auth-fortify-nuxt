@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <h3>Hello World</h3>
+     <AppNav />
     <Nuxt />
   </div>
 </template>

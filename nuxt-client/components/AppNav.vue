@@ -8,7 +8,7 @@
       <template v-if="$auth.loggedIn">
          <li><a href="" class="px-2">{{ $auth.user.name }}</a></li>
           <li><a href="" class="px-2">Dashboard</a></li>
-          <li><a href="" class="px-2">Log out</a></li>
+          <li><a href="" class="px-2" @click.prevent="logout">Log out</a></li>
       </template>
 
 
@@ -21,3 +21,14 @@
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+      async logout() {
+        await this.$auth.logout();
+        this.$router.replace({ name: 'index' });
+      }
+  }
+}
+</script>
