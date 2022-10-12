@@ -32,8 +32,6 @@ export default {
   methods: {
     async login() {
 
-      console.log(this.form);
-      console.log(this.$auth);
       try {
         await this.$auth.loginWith('laravelSanctum', {
           data: this.form
