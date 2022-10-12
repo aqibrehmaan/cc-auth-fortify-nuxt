@@ -20,7 +20,8 @@ return [
         'sanctum/csrf-cookie',
         'login',
         'logout',
-        'register'
+        'register',
+        'user/profile-information'
     ],
 
     'allowed_methods' => ['*'],
